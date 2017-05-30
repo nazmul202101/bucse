@@ -1,19 +1,10 @@
+<?php include("config.php") ?>
 <?php 
 	include 'inc/header.php' ;
-	include 'lib/user.php'
 
 
 ?>
 
-<?php 
-
-	$user=new User();
-	if ($_SERVER['REQUEST_METHOD']=='POST'&& isset($_POST['Registation'])) {
-		
-		$usrregi=$user->userRegistation($_POST);
-	}
-
- ?>
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h2>User Registation:</h2>
@@ -21,7 +12,7 @@
 
 					<div class="panel-body">
 						<div style="max-width: 600px;margin: 0 auto">
-						<form action="" method="POST">
+						<form action="user_info.php" method="POST">
 
 						<div class="form-group">
 								<label for="name">Your Name :</label>
